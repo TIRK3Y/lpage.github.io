@@ -1,0 +1,668 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Professional Font */
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Full-screen Background Video */
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  /* Centered Card with Glassmorphism */
+  .center-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .profile {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 800px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+  }
+  
+  .profile-info {
+    color: white; 
+  }
+  
+  .profile-info h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  
+  .btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Social Icons Centered and Below Message */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+  }
+  
+  /* Portfolio Under Construction */
+  .construction-text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .center-card {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .profile {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .profile-pic {
+      margin: 0 0 20px 0;
+      width: 120px;
+      height: 120px;
+    }
+  
+    .profile-info h1 {
+      font-size: 22px;
+    }
+  
+    .profile-info p {
+      font-size: 16px;
+    }
+  
+    #changing-text {
+      font-size: 16px;
+    }
+  
+    .profile:hover {
+      transform: rotateY(20deg) rotateX(10deg);
+    }
+  
+    .social-icons {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .profile {
+      flex-direction: column;
+      width: 90%;
+    }
+  
+    .profile-pic {
+      margin: 0 0 20px 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .profile {
+      flex-direction: row;
+      width: 800px;
+    }
+  
+    .profile-pic {
+      margin-right: 30px;
+    }
+  }
+  
+
+  /* Mobile View (ID Card Size) */
+@media (max-width: 768px) {
+    .center-card {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .profile {
+      flex-direction: column;
+      width: 320px; 
+      height: 500px; 
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+    }
+  
+    .profile-pic {
+      margin: 0 0 15px 0;
+      width: 120px;
+      height: 120px;
+    }
+  
+    .profile-info h1 {
+      font-size: 20px;
+    }
+  
+    .profile-info p {
+      font-size: 14px;
+    }
+  
+    #changing-text {
+      font-size: 14px;
+    }
+  
+    .btn {
+      margin-top: 10px;
+    }
+  
+    .social-icons {
+      justify-content: center;
+      margin-top: auto; 
+      padding-bottom: 15px; 
+    }
+  }
+  
+  /* Removed Hover Effect */
+  .profile:hover {
+    transform: none; 
+  }
+  
+
+  
+
+  /* Hover effect for social media icons */
+.social-icons a:hover {
+    color: inherit; 
+  }
+  .social-icons a:nth-child(1):hover {
+    color: #0057ff;
+  }
+  .social-icons a:nth-child(2):hover {
+    color: #0077b5; 
+  }
+  .social-icons a:nth-child(3):hover {
+    color: #1DB954; 
+  }
+  .social-icons a:nth-child(4):hover {
+    color: #FF0000; 
+  }
+  .social-icons a:nth-child(5):hover {
+    color: #C13584; 
+  }
+  .social-icons a:nth-child(6):hover {
+    color: #333;
+  }
+  
+  /* Adjust text color for "I am a" */
+  #changing-text {
+    color: rgba(255, 255, 255, 0.85); 
+  }
+  
+  /* Align top of profile image with name */
+  @media (min-width: 769px) {
+    .profile {
+      display: flex;
+      align-items: flex-start; 
+    }
+  }
+  
+  /* Container with blinking dot and "Available for work" */
+  .available-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+  
+  .blinking-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+
+
+
+  /* Animated Pin/Location Icon */
+.animated-location {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-8px);
+    }
+    60% {
+      transform: translateY(-4px);
+    }
+  }
+  
+ 
+  
+  /* Green Blinking Dot with Glow */
+  .blinking-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+    box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.6);
+  }
+  
+  /* Glow Effect for Message Button and GitHub Icon */
+  .contact .btn, .contact .github-icon {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  .contact .github-icon {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+  
+  .contact .btn:hover, .contact .github-icon:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Adjusted Quote Text */
+  .creative-text {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'Georgia', serif; 
+    font-style: italic;
+  }
+  
+  /* Animated Quotation Marks */
+  .creative-text::before, .creative-text::after {
+    content: '"';
+    color: #f0f0f0;
+    font-size: 24px;
+    animation: fadeInOut 1s infinite alternate;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+
+  /* Verified Icon - SVG */
+.verified-icon svg {
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  /* Glow effect for message button and GitHub icon */
+  .contact .btn, .contact .github-icon {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+  }
+  
+  .contact .github-icon {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+  }
+  
+  .contact .btn:hover, .contact .github-icon:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+  }
+  
+  /* Increased glow effect for green blinking dot with glassmorphism */
+  .blinking-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #00ff00;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+    box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.8); 
+    backdrop-filter: blur(10px); 
+  }
+  
+  /* Bounce animation for the location icon */
+  .animated-location {
+    animation: bounce 2s infinite;
+  }
+  
+  @media (max-width: 768px) {
+    /* Center the entire card content for mobile view */
+    .profile {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    /* Center the profile picture */
+    .profile-pic {
+      margin: 0 auto;
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  
+    /* Center profile information */
+    .profile-info h1, .profile-info p, #changing-text {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    /* Make "Available for work" section smaller and centered */
+    .available-container {
+      width: auto;
+      padding: 5px 10px;
+      margin: 0 auto;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2); 
+    }
+  
+    .available-container span {
+      margin-left: 5px;
+    }
+  
+    /* Center the message button and GitHub icon */
+    .contact {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    /* Perfectly center the social media icons */
+    .social-icons {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%); 
+      width: auto;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .social-icons a {
+      margin: 0 10px; 
+    }
+    
+  }
+  /* Bold the changing text for "Developer", "Designer", "Artist" */
+#changing-text span {
+    font-weight: bold;
+  }
+  
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Glassmorphism Blinking Button */
+  .glass-button {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 20px;
+    right: 20px; 
+    z-index: 1000; 
+    animation: glow-blink 1.5s infinite;
+}
+
+/* Blinking glow effect */
+@keyframes glow-blink {
+    0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); } 
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.glass-button:active {
+    transform: scale(0.95);
+}
+
+
+/* Glassmorphism styling for transparent widget */
+.weather-widget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+}
+
+/* Icon styling to prevent squeeze */
+.weather-widget .weather-icon img {
+    width: 100px;
+    height: auto;
+}
+
+.weather-info {
+    text-align: right;
+    color: white;
+}
+
+.temperature {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* Dynamic backgrounds based on weather */
+body.sunny {
+    background: url('./Weather/02.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.cloudy {
+    background: url('./Weather/01.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.rainy {
+    background: url('./Weather/03.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.windy {
+    background: url('./Weather/06.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Resume*/
+.resume-download {
+    position: absolute;
+    top: 10px; /* Adjust top spacing */
+    right: 10px; /* Adjust right spacing */
+    width: 40px; /* Small icon size */
+    height: 40px; /* Small icon size */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Soft initial glow */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .resume-download:hover {
+    transform: scale(1.15); /* Slight scale on hover */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); /* Stronger glow on hover */
+    background: rgba(255, 255, 255, 0.15); /* Slight background color change */
+  }
+  
+  .resume-icon {
+    width: 20px; /* Small icon */
+    height: 20px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); /* Add glow effect to icon */
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 1024px) { /* Tablet / iPad view */
+    .resume-download {
+      top: 15px; /* Adjust positioning for smaller screens */
+      right: 15px;
+      width: 35px;
+      height: 35px;
+    }
+  
+    .resume-icon {
+      width: 18px; /* Resize icon for smaller screens */
+      height: 18px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) { /* Mobile view */
+    .resume-download {
+      top: 15px; /* Keep it in top right */
+      right: 15px;
+      width: 30px;
+      height: 30px;
+    }
+  
+    .resume-icon {
+      width: 16px; /* Further resize icon for mobile */
+      height: 16px;
+    }
+  }
+  
+  .typing-text {
+    font-weight: bold;
+    color: #fff; /* Adjust based on your theme */
+    white-space: nowrap;
+    border-right: 2px solid; /* Optional: to create a cursor effect */
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
