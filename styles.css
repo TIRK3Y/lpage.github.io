@@ -1,16 +1,14 @@
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Professional Font */
   body {
     font-family: 'Poppins', sans-serif;
   }
   
-  /* Full-screen Background Video */
+  /* BG */
   #bg-video {
     position: fixed;
     top: 0;
@@ -21,7 +19,7 @@
     z-index: -1;
   }
   
-  /* Centered Card with Glassmorphism */
+  /* Centered Card*/
   .center-card {
     display: flex;
     justify-content: center;
@@ -80,7 +78,7 @@
     background: rgba(255, 255, 255, 0.4);
   }
   
-  /* Social Icons Centered and Below Message */
+  /* Social Icons*/
   .social-icons {
     display: flex;
     justify-content: center;
@@ -99,7 +97,7 @@
     color: #ffcc00;
   }
   
-  /* Portfolio Under Construction */
+  /* Quote*/
   .construction-text {
     position: absolute;
     bottom: 10px;
@@ -109,7 +107,7 @@
     font-size: 16px;
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .center-card {
       flex-direction: column;
@@ -174,7 +172,7 @@
   }
   
 
-  /* Mobile View (ID Card Size) */
+
 @media (max-width: 768px) {
     .center-card {
       flex-direction: column;
@@ -220,7 +218,7 @@
     }
   }
   
-  /* Removed Hover Effect */
+
   .profile:hover {
     transform: none; 
   }
@@ -228,7 +226,7 @@
 
   
 
-  /* Hover effect for social media icons */
+
 .social-icons a:hover {
     color: inherit; 
   }
@@ -251,12 +249,12 @@
     color: #333;
   }
   
-  /* Adjust text color for "I am a" */
+
   #changing-text {
     color: rgba(255, 255, 255, 0.85); 
   }
   
-  /* Align top of profile image with name */
+
   @media (min-width: 769px) {
     .profile {
       display: flex;
@@ -264,7 +262,7 @@
     }
   }
   
-  /* Container with blinking dot and "Available for work" */
+  /* Available for work */
   .available-container {
     display: flex;
     align-items: center;
@@ -293,7 +291,7 @@
 
 
 
-  /* Animated Pin/Location Icon */
+
 .animated-location {
     animation: bounce 2s infinite;
   }
@@ -312,7 +310,7 @@
   
  
   
-  /* Green Blinking Dot with Glow */
+
   .blinking-dot {
     height: 10px;
     width: 10px;
@@ -323,7 +321,7 @@
     box-shadow: 0 0 8px 2px rgba(0, 255, 0, 0.6);
   }
   
-  /* Glow Effect for Message Button and GitHub Icon */
+
   .contact .btn, .contact .github-icon {
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -345,7 +343,7 @@
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   }
   
-  /* Adjusted Quote Text */
+
   .creative-text {
     position: absolute;
     bottom: 50px;
@@ -357,7 +355,7 @@
     font-style: italic;
   }
   
-  /* Animated Quotation Marks */
+  /* Quote */
   .creative-text::before, .creative-text::after {
     content: '"';
     color: #f0f0f0;
@@ -379,7 +377,7 @@
     margin-left: 5px;
   }
   
-  /* Glow effect for message button and GitHub icon */
+
   .contact .btn, .contact .github-icon {
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -405,7 +403,7 @@
     border: 1px solid rgba(255, 255, 255, 0.5); 
   }
   
-  /* Increased glow effect for green blinking dot with glassmorphism */
+
   .blinking-dot {
     height: 10px;
     width: 10px;
@@ -417,13 +415,13 @@
     backdrop-filter: blur(10px); 
   }
   
-  /* Bounce animation for the location icon */
+
   .animated-location {
     animation: bounce 2s infinite;
   }
   
   @media (max-width: 768px) {
-    /* Center the entire card content for mobile view */
+
     .profile {
       position: relative;
       display: block;
@@ -434,7 +432,7 @@
       text-align: center;
     }
   
-    /* Center the profile picture */
+
     .profile-pic {
       margin: 0 auto;
       display: block;
@@ -443,13 +441,13 @@
       border-radius: 50%;
     }
   
-    /* Center profile information */
+
     .profile-info h1, .profile-info p, #changing-text {
       text-align: center;
       margin: 10px 0;
     }
   
-    /* Make "Available for work" section smaller and centered */
+
     .available-container {
       width: auto;
       padding: 5px 10px;
@@ -465,13 +463,13 @@
       margin-left: 5px;
     }
   
-    /* Center the message button and GitHub icon */
+ 
     .contact {
       text-align: center;
       margin-top: 20px;
     }
   
-    /* Perfectly center the social media icons */
+ 
     .social-icons {
       position: absolute;
       bottom: 10px;
@@ -487,7 +485,7 @@
     }
     
   }
-  /* Bold the changing text for "Developer", "Designer", "Artist" */
+
 #changing-text span {
     font-weight: bold;
   }
@@ -499,7 +497,7 @@
     object-fit: cover;
   }
   
-  /* Glassmorphism Blinking Button */
+
   .glass-button {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
@@ -517,7 +515,7 @@
     animation: glow-blink 1.5s infinite;
 }
 
-/* Blinking glow effect */
+
 @keyframes glow-blink {
     0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
     50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); } 
@@ -532,7 +530,7 @@
 }
 
 
-/* Glassmorphism styling for transparent widget */
+
 .weather-widget {
     display: flex;
     align-items: center;
@@ -550,7 +548,7 @@
     
 }
 
-/* Icon styling to prevent squeeze */
+
 .weather-widget .weather-icon img {
     width: 100px;
     height: auto;
@@ -573,7 +571,7 @@
 }
 
 
-/* Dynamic backgrounds based on weather */
+
 body.sunny {
     background: url('./Weather/02.png') no-repeat center center fixed;
     background-size: cover;
@@ -598,13 +596,13 @@ body.windy {
 /* Resume*/
 .resume-download {
     position: absolute;
-    top: 10px; /* Adjust top spacing */
-    right: 10px; /* Adjust right spacing */
-    width: 40px; /* Small icon size */
-    height: 40px; /* Small icon size */
+    top: 10px; 
+    right: 10px; 
+    width: 40px; 
+    height: 40px; 
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Soft initial glow */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
@@ -613,51 +611,51 @@ body.windy {
   }
   
   .resume-download:hover {
-    transform: scale(1.15); /* Slight scale on hover */
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); /* Stronger glow on hover */
-    background: rgba(255, 255, 255, 0.15); /* Slight background color change */
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); 
+    background: rgba(255, 255, 255, 0.15); 
   }
   
   .resume-icon {
-    width: 20px; /* Small icon */
+    width: 20px; 
     height: 20px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); /* Add glow effect to icon */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); 
   }
   
-  /* Responsive Adjustments */
-  @media screen and (max-width: 1024px) { /* Tablet / iPad view */
+ 
+  @media screen and (max-width: 1024px) { 
     .resume-download {
-      top: 15px; /* Adjust positioning for smaller screens */
+      top: 15px; 
       right: 15px;
       width: 35px;
       height: 35px;
     }
   
     .resume-icon {
-      width: 18px; /* Resize icon for smaller screens */
+      width: 18px; 
       height: 18px;
     }
   }
   
-  @media screen and (max-width: 768px) { /* Mobile view */
+  @media screen and (max-width: 768px) { 
     .resume-download {
-      top: 15px; /* Keep it in top right */
+      top: 15px; 
       right: 15px;
       width: 30px;
       height: 30px;
     }
   
     .resume-icon {
-      width: 16px; /* Further resize icon for mobile */
+      width: 16px;
       height: 16px;
     }
   }
   
   .typing-text {
     font-weight: bold;
-    color: #fff; /* Adjust based on your theme */
+    color: #fff; 
     white-space: nowrap;
-    border-right: 2px solid; /* Optional: to create a cursor effect */
+    border-right: 2px solid; 
     animation: blink-cursor 0.75s step-end infinite;
 }
 
