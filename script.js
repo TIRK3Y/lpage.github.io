@@ -1,6 +1,6 @@
 // Likhit effect
 const typingText = document.querySelector('.typing-text');
-const textArray = ['a Developer', 'a Designer', 'an Artist'];
+const textArray = ['Developer', 'Designer', 'Musician'];
 let textIndex = 0;
 let charIndex = 0;
 let currentText = '';
