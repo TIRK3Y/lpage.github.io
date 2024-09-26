@@ -1,6 +1,6 @@
-// Typing effect for the "I am a Developer/Designer/Artist" text
+// Likhit effect
 const typingText = document.querySelector('.typing-text');
-const textArray = ['Developer', 'Designer', 'Artist'];  // The words to be typed
+const textArray = ['a Developer', 'a Designer', 'an Artist'];
 let textIndex = 0;
 let charIndex = 0;
 let currentText = '';
@@ -9,25 +9,25 @@ let isDeleting = false;
 function type() {
     const currentWord = textArray[textIndex];
 
-    // Check if the text is currently being deleted
+    // Likhit Mitana
     if (!isDeleting) {
-        // Add characters to the current text
+        
         currentText = currentWord.substring(0, charIndex + 1);
         charIndex++;
     } else {
-        // Remove characters from the current text
+        
         currentText = currentWord.substring(0, charIndex - 1);
         charIndex--;
     }
 
     typingText.textContent = currentText;
 
-    // When word is fully typed
+    
     if (charIndex === currentWord.length && !isDeleting) {
         setTimeout(() => isDeleting = true, 2500); // Pause before deleting
     }
 
-    // When word is fully deleted
+    // Fully deleted Texs
     if (isDeleting && charIndex === 0) {
         isDeleting = false;
         textIndex = (textIndex + 1) % textArray.length; // Move to next word
@@ -40,7 +40,7 @@ function type() {
 
 // Start the typing effect on page load
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(type, 500);  // Slight delay before starting
+    setTimeout(type, 500);  
 });
 
 
@@ -54,20 +54,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const icon = document.getElementById('button-icon');
     
     button.addEventListener('click', function() {
-        // Log for debugging
+        
         console.log('Button clicked!');
 
-        // Toggle the video source
+       
         const currentSrc = video.getAttribute('src');
         if (currentSrc === './Background/05.mp4') {
             video.setAttribute('src', './Background/08.mp4');
-            icon.textContent = '🌜';  // Change icon to moon for dark mode
+            icon.textContent = '🌜';  // Andhera Kayam Rahe
         } else {
             video.setAttribute('src', './Background/05.mp4');
             icon.textContent = '🌞';  // Change icon back to sun for light mode
         }
 
-        // Reload the video to start playing the new source
+        // Reload the BG
         video.load();
     });
 });
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const temperatureElement = document.getElementById("temperature");
     const locationElement = document.getElementById("location");
 
-    const API_KEY = "37f24d6410aee98c75f17101645f7258"; // If Youre using my API please do let me Know
+    const API_KEY = "37f24d6410aee98c75f17101645f7258"; // If Youre using my API please do let me Know, Haa bro..
 
     function updateWeatherData(latitude, longitude) {
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
@@ -95,11 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 const location = data.name;
                 const weather = data.weather[0].main.toLowerCase();
 
-                // Update the widget with weather data
+                // Mausam
                 temperatureElement.textContent = `${temp}°C`;
                 locationElement.textContent = location;
 
-                // Update weather icon based on the weather description
+                // Emote 
                 if (weather.includes("cloud")) {
                     weatherIcon.src = "./Weather/01.png";
                 } else if (weather.includes("sun")) {
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (weather.includes("wind")) {
                     weatherIcon.src = "./Weather/06.png";
                 } else {
-                    weatherIcon.src = "./Weather/02.png"; // default icon
+                    weatherIcon.src = "./Weather/02.png"; // default
                 }
             })
             .catch((error) => {
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Get the user's current location
+    // Get current location
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
             const latitude = position.coords.latitude;
